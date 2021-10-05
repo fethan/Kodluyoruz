@@ -1,0 +1,30 @@
+body {
+    position: absolute;    
+    left: 20%;
+}
+div  a {
+
+padding-left : 90px;
+}
+
+h1, h3 {
+    text-align : center;
+} 
+
+h1 {
+    color: #003366;
+}
+
+h3 {
+    color: blue;
+}
+
+img {
+    padding-left: 20%;
+    border-radius: 8px;
+    max-height : 50%;
+    height : auto;
+}
+li {
+    list-style-position: inside;
+}
