@@ -1,0 +1,44 @@
+body{
+    margin: 15px;
+    
+}
+img {
+    margin-left: 35%;
+}
+
+#gray-area {
+    background-color: #C9CCD5;
+    text-align: center;
+
+}
+.flex-container {
+    display: flex;
+    flex: 1;    
+    text-align: center;
+    justify-content: space-between;
+}
+#first {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;  
+    width: 20%;
+
+}
+    
+#second {
+        background-color: #3be4cd; 
+        width : 45%;     
+    }
+#second a {
+    display: flex;
+    flex-direction: column;  
+    
+}    
+    
+#third {
+        background-color: #1beeb9;
+    
+    }
+.footer { 
+    text-align: center; 
+}
