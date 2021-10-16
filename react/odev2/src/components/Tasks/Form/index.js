@@ -1,10 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const initialFormValues = { task_text: "", isDone: false };
 
 
-function Form() {
+function Form({ addTask, tasks }) {
     const [form, setForm] = useState(initialFormValues);
+
+    useEffect(() => {
+        setForm(initialFormValues);
+    }, [tasks]);
 
     const handleChange = (event) => {
         setForm({
@@ -17,6 +21,7 @@ function Form() {
         if (form.task_text === "") {
             return false;
         }
+        addTask([...tasks, form]);
         console.log("added");
 
     }
@@ -36,6 +41,7 @@ function Form() {
                 <input
                     name="task_text"
                     autoFocus
+                    value={form.task_text}
                     onChange={handleChange}
                     onKeyPress={handleKeyPress}
                     placeholder="What needs to be done?" />
