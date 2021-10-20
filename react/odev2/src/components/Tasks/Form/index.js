@@ -10,6 +10,8 @@ function Form({ addTask, tasks }) {
         setForm(initialFormValues);
     }, [tasks]);
 
+
+
     const handleChange = (event) => {
         setForm({
             ...form,
@@ -21,6 +23,7 @@ function Form({ addTask, tasks }) {
         if (form.task_text === "") {
             return false;
         }
+        
         addTask([...tasks, form]);
         console.log("added");
 
@@ -45,8 +48,6 @@ function Form({ addTask, tasks }) {
                     onChange={handleChange}
                     onKeyPress={handleKeyPress}
                     placeholder="What needs to be done?" />
-                <br />
-                {form.task_text}
             </div>
         </form>
     )

@@ -9,7 +9,7 @@ function Tasks() {
             task_text: "bulaşıkları yıka", isDone: false
         },
         {
-            task_text: "evi süpür", isDone: false
+            task_text: "evi süpür", isDone: true
         },
         {
             task_text: "hocaya mail at", isDone: false
