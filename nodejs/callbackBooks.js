@@ -10,10 +10,25 @@ const listBooks = () => {
 };
 
 
-const addBook = (newBook, callback) => {
-    books.push(newBook);
-    callback();
-}
+const addBook = (newBook) => {
+    const promise1 = new Promise((resolve, reject) => {
 
-addBook({ name: "Kitap 4", author: "Yazar 4" }, listBooks);
+        books.push(newBook);
+        // reject("Bir hata oluştu.");
+    })
+    return promise1;
+};
 
+
+
+
+addBook({ name: "Kitap 4", author: "Yazar 4" })
+    .then(() => {
+        console.log("Yeni Liste");
+        listBooks();
+    })
+    .catch((error) => {
+        console.log(error)
+    });
+
+listBooks();
