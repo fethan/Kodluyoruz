@@ -1,5 +1,11 @@
 const func = async () => {
-    return 10;
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => { resolve("Tamamlandı!") }, 2000);
+    });
+
+    let result = await promise;
+
+    console.log(result);
 }
 
-func().then(console.log);
+func();
